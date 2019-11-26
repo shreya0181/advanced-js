@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var pilot = [
+        { id: 1, name: "shreya", years: 2 },
+        {
+          id: 2,
+          name: "xyc",
+          years: 3
+        },
+        {
+          id: 3,
+          name: "mnop",
+          years: 5
+        }
+      ];
+      var totalyrs = pilot.reduce(
+        (accumulator, pilot) => accumulator + pilot.years,
+        0
+      ); //params+funstatement, init
+      console.log(totalyrs);
+
+      //oldest//
+      var mostExpPilot = pilot.reduce(
+        (oldest, pilot) => ((oldest.years || 0) > pilot.years ? oldest : pilot),
+        {}
+      ); //callback
+
+      console.log(mostExpPilot);
+    </script>
+  </body>
+</html>

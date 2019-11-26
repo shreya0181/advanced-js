@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //"use strict";// doesn't allow reinit, init w/o declare ---ES5
+      //         call-apply-bind(binds methodreturn fun)
+      //params:  ,-arry-
+      var person = {
+        last: "xyc",
+        name: "shreya",
+        fullName: function() {
+          console.log(this.name + " " + this.last);
+        }
+      };
+      var person2 = {
+        last: "xyc2",
+        name: "shreya2"
+      };
+      var fullNameByCall = person.fullName.call(person2); //with params in string,
+      var fullNameByapply = person.fullName.apply(person2); //with params in array
+      var fullNameByBind = person.fullName.bind(person2); //with params in string,
+      console.log("fullNameByCall" + " " + typeof fullNameByCall);
+      console.log("fullNameByapply" + " " + typeof fullNameByapply);
+      console.log("fullNameByBind" + " " + typeof fullNameByBind);
+    </script>
+  </body>
+</html>

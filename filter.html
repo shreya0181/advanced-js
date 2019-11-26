@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var pilot = [
+        { id: 1, name: "shreya", faction: "empire" },
+        {
+          id: 2,
+          name: "xyc",
+          faction: "rebels"
+        },
+        {
+          id: 3,
+          name: "mnop",
+          faction: "empire"
+        }
+      ];
+      var rebels = pilot.filter(pilot => pilot.faction === "rebels");
+      var empire = pilot.filter(pilot => pilot.faction === "empire");
+      console.log(rebels);
+      console.log(empire);
+    </script>
+  </body>
+</html>
